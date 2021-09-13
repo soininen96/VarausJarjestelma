@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="596.0" prefWidth="1162.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="varausjarjestelma.VarausViewController">
+   <children>
+      <BorderPane layoutX="6.0" prefHeight="451.0" prefWidth="1169.0">
+         <left>
+            <VBox prefHeight="527.0" prefWidth="164.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Vanha asiakas">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="cboVanhaAsiakas" onAction="#cboVanhaAsiakasPressed" prefWidth="150.0" />
+                  <Button fx:id="btnUusiAsiakas" mnemonicParsing="false" onAction="#btnUusiAsiakasPressed" prefHeight="25.0" prefWidth="148.0" text="Uusi asiakas">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnTallennaVaraus" disable="true" mnemonicParsing="false" onAction="#btnTallennaVarausPressed" prefHeight="25.0" prefWidth="121.0" text="Tallenna">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" top="480.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <VBox fillWidth="false" prefHeight="516.0" prefWidth="489.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="20.0" prefWidth="488.0" spacing="10.0">
+                     <children>
+                        <Label text="Nimi" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Text fx:id="txtNimiVaroitus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="421.13671875">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="25.0" prefWidth="491.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="txtAsiakasNimi" editable="false" prefHeight="25.0" prefWidth="311.0" promptText="1-30 merkkiä" />
+                        <Circle fx:id="circleNimiVaroitus" fill="RED" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                        <Text fx:id="txtVanhaAsiakasVaroitus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="154.13671875" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="488.0" spacing="10.0">
+                     <children>
+                        <Label text="Katuosoite" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Text fx:id="txtKatuosoiteVaroitus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="395.13671875">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="25.0" prefWidth="497.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="txtAsiakasOsoite" editable="false" prefWidth="400.0" promptText="1-30 merkkiä" />
+                        <Circle fx:id="circleKatuosoiteVaroitus" fill="RED" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="491.0" spacing="10.0">
+                     <children>
+                        <Label text="Postinumero" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Text fx:id="txtPostinumeroVaroitus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="388.13671875">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="25.0" prefWidth="490.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="txtAsiakasPostiNumero" editable="false" prefHeight="25.0" prefWidth="176.0" promptText="1-6 numeroa" />
+                        <Circle fx:id="circlePostinumeroVaroitus" fill="RED" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="512.0" spacing="10.0">
+                     <children>
+                        <Label text="Postitoimipaikka" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Text fx:id="txtPostipaikkaVaroitus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="365.13671875">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="25.0" prefWidth="491.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="txtAsiakasPostiPaikka" editable="false" prefHeight="25.0" prefWidth="255.0" promptText="1-30 merkkiä" />
+                        <Circle fx:id="circlePostipaikkaVaroitus" fill="RED" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="491.0" spacing="10.0">
+                     <children>
+                        <Label text="Sähköpostiosoite" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Text fx:id="txtSpostiVaroitus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="360.13671875">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="25.0" prefWidth="496.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="txtAsiakasSposti" editable="false" prefWidth="400.0" promptText="1-30 merkkiä" />
+                        <Circle fx:id="circleSpostiVaroitus" fill="RED" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                        <Text fx:id="txtSamaSpostiVaroitus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="211.13671875" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="490.0" spacing="10.0">
+                     <children>
+                        <Label text="Puhelinnumero" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Text fx:id="txtPuhnumVaroitus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="368.13671875">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="25.0" prefWidth="509.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="txtAsiakasPuhNum" editable="false" prefWidth="400.0" promptText="0-15 numeroa" />
+                        <Circle fx:id="circlePuhnumVaroitus" fill="RED" radius="6.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                        <Text fx:id="txtSamaPuhnumVaroitus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="231.13671875" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="503.0" spacing="10.0">
+                     <children>
+                        <Label text="Laskutustapa" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Text fx:id="txtLaskutusVaroitus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="377.13671875">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="246.0" spacing="10.0">
+                     <children>
+                        <RadioButton fx:id="radSahkoinen" disable="true" mnemonicParsing="false" text="Sähköinen">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="radLaskutus" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="radPaperinen" disable="true" mnemonicParsing="false" text="Paperinen" toggleGroup="$radLaskutus" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Text fx:id="txtKalenteriVaroitus" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" visible="false" wrappingWidth="416.13671875">
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox prefHeight="14.0" prefWidth="489.0" spacing="170.0">
+                     <children>
+                        <Label text="Alku pvm" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Loppu pvm" underline="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="182.0" prefWidth="489.0" spacing="60.0">
+                     <children>
+                        <DatePicker fx:id="dateAlkupvm" disable="true" editable="false" onAction="#dateAlkupvmSelected">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                        <DatePicker fx:id="dateLoppupvm" disable="true" editable="false">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnPeruutaVaraus" mnemonicParsing="false" onAction="#btnPeruutaVarausPressed" prefHeight="25.0" prefWidth="121.0" text="Peruuta">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </center>
+         <right>
+            <HBox fillHeight="false" prefHeight="497.0" prefWidth="511.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fillHeight="false" prefHeight="336.0" prefWidth="422.0">
+                     <children>
+                        <VBox prefHeight="353.0" prefWidth="413.0">
+                           <children>
+                              <HBox fillHeight="false" prefHeight="337.0" prefWidth="413.0">
+                                 <children>
+                                    <VBox fx:id="vboxPalvelut" accessibleRole="CHECK_BOX" prefHeight="335.0" prefWidth="208.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Palvelut">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox fx:id="vboxLaitteet" accessibleRole="CHECK_BOX" prefHeight="583.0" prefWidth="207.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Laitteet">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

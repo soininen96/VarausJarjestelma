@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="varausjarjestelma.LaskuViewController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutY="-1.0" prefHeight="484.0" prefWidth="504.0" spacing="5.0">
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="503.0" text="Kohde" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Text fx:id="txtKohde" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="498.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="503.0" text="Hinta koostuu" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="499.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="58.0" text="Huone:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txtHuoneNumero" strokeType="OUTSIDE" strokeWidth="0.0" text="1," wrappingWidth="48.9814453125">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Label layoutX="10.0" layoutY="10.0" text="Päivähinta:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txtHuonePaivaHinta" layoutX="65.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="231" wrappingWidth="258.9814453125">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="499.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="67.0" text="Palvelut:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Text fx:id="txtPalvelut" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="424.13671875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="499.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="64.0" text="Laitteet:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Text fx:id="txtLaitteet" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="424.13671875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="3.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="499.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="66.0" text="Aikaväli:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txtAikavali" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="247.13671875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="499.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="64.0" text="Summa:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txtSumma" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="397.13671875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="1.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="277.0" prefHeight="0.0" prefWidth="499.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="64.0" text="Eräpvm:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txtErapvm" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="247.13671875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="1.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="16.0" prefWidth="499.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="104.0" text="Viitenumero:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txtViitenumero" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="247.13671875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="1.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="499.0" spacing="10.0">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <children>
+                  <Label prefHeight="27.0" prefWidth="126.0" text="Laskutus osoite:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txtOsoite" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="357.13671875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="1.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="383.0" prefHeight="27.0" prefWidth="499.0" spacing="10.0">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <children>
+                  <Label prefHeight="27.0" prefWidth="104.0" text="Laskutettava:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="txtLaskutettava" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="357.13671875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="1.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="btnLahetaLasku" layoutX="354.0" layoutY="486.0" mnemonicParsing="false" onAction="#btnLahetaLaskuPressed" prefHeight="41.0" prefWidth="132.0" text="Lähetä lasku">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
